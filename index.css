@@ -1,0 +1,568 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    scroll-behavior: smooth;
+    
+    overflow-x: hidden;
+    background-color: black;
+}
+.sticky{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    z-index: 5;
+    height: 40px;
+    backdrop-filter: blur(1.8px) grayscale(50);
+    
+    
+}
+.sticky svg{
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+.sticky h2{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    left: 8%;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sticky .ham{
+    width: 30px;
+    height: 15px;
+    
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+align-items: center;
+}
+.sticky .ham div{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+}
+.sticky .ham div:nth-child(1){
+    width: 70%;
+    margin-left: 7px;
+}
+.sticky .ham div:nth-child(3){
+    width: 70%;
+    margin-right: 7px;
+}
+.landing{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.589),black),url(./lagos.JPG);
+     background-position: center;
+     background-size: cover;
+     
+}
+.landing .build{
+    color: rgba(255, 255, 255, 0.884);
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    width: 90%;
+    font-family:  Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.landing .hire{
+    color: rgba(255, 255, 255, 0.589);
+    position: absolute;
+    top: 250px;
+    font-size: 15px;
+    font-family:  Courier, monospace;
+    font-weight: lighter;
+    left: 10%;
+}
+.landing .trusted{
+    color: rgba(255, 255, 255, 0.589);
+    position: absolute;
+    top: 400px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family:  Courier, monospace;
+    font-weight: lighter;
+    left: 10%;
+}
+.landing .net{
+    width: 80%;
+    height: 40px;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+.landing .net li{
+    width: 40%;
+    height: 100%;
+    background-color: green;
+    border-radius: 50px;
+    position: relative;
+}
+.landing .net li:nth-child(1){
+    background-color: rgb(4, 96, 119);
+    color: white;
+}
+.landing .net li:nth-child(2){
+    background-color: rgb(244, 249, 250);
+    color: rgb(4, 62, 77);
+}
+.landing .net li p{
+    
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.landing .company{
+    position: absolute;
+    bottom: 30px;
+   width: 100%;
+    
+}
+.landing .company ul{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+   
+    
+}
+
+.landing .company li{
+    width: 20%;
+   margin: 10px;
+}
+.landing .company li:nth-child(1){
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: lighter;
+   opacity: .4;
+}
+.landing .company li:nth-child(2){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: green;
+    font-weight: bolder;
+}
+.landing .company li:nth-child(3){
+    font-family:  cursive;
+    color: blue;
+    font-weight: bolder;
+}
+.landing .company li:nth-child(4){
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: lighter;
+   opacity: .3;
+}
+.landing .company li:nth-child(5){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    opacity: .3;
+}
+.landing .company li:nth-child(6){
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    opacity: .3;
+}
+.landing .company li:nth-child(7){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+.slider {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+    position: relative;
+    margin-top: -100vh;
+    transform: translateX(-100%);
+    transition: transform 1s;
+    position: fixed;
+    z-index: 4;
+}
+.slide{
+    transform: translateX(0%);
+    
+}
+.second{
+    width: 100vw;
+    height: 320vh;
+    position: relative;
+}
+.second .featured{
+    color: rgba(255, 255, 255, 0.438);
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.second .list{
+    color: white;
+    list-style-type: none;
+    display: flex;
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    justify-content: space-between;
+    top: 70px;
+}
+.second .list li:nth-child(1){
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bolder;
+opacity: .3;
+}
+.second .list li:nth-child(2){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    opacity: .3;
+}
+.second .list li:nth-child(3){
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+opacity: .3;
+}
+.second .ship{
+    color: rgba(255, 255, 255, 0.795);
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 50%;
+    text-align: start;
+    text-transform: capitalize;
+    position: absolute;
+    left: 5%;
+    top: 180px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.second .avoid{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 14px;
+    opacity: .5;
+    position: absolute;
+    left: 5%;
+    top: 230px;
+}
+.second .unor{
+    position: absolute;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 300px;
+}
+.second .unor li{
+    width: 95%;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.second .unor li:hover{
+    background-color: rgb(50, 90, 128);
+    color: black;
+}
+.second .unor li div{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 3px 3px 17px rgba(0, 0, 0, 0.473);
+}
+.second .unor li h3{
+  text-transform: capitalize;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  margin-left: 40%;
+  margin-top: 40px;
+  transform: translateX(-50%);
+}
+.second .unor li h6{
+    color: white;
+    margin-left: 40%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 17px;
+    width: 60%;
+    line-height: 30px;
+    opacity: .5;
+}
+.second .unor li div svg{
+    position: absolute;
+    margin: 40px;
+}
+.third{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+.third .from{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    position: absolute;
+    width: 95%;
+    left: 5%;
+    line-height: 40px;
+    letter-spacing: 1px;
+    top: 50px;
+}
+.third .our{
+    position: absolute;
+    top: 150px;
+    left: 5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    opacity: .5;
+}
+.third img{
+    position: absolute;
+    width: 90%;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.third .lever{
+    color: white;
+    position: absolute;
+    top: 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    width: 95%;
+    left: 5%;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.third .tap{
+    position: absolute;
+    top: 650px;
+    left: 5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    opacity: .5;
+}
+.third .skills{
+    width: 90%;
+    
+    position: absolute;
+    top: 750px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.third .skills li{
+    background-color: rgba(41, 40, 40, 0.37);
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+   padding: 10px;
+}
+.third .skills li h5{
+    text-transform: capitalize;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    margin: 10px;
+}
+.third .skills li h2{
+    text-transform: capitalize;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    margin-top:-35px ;
+    position: absolute;
+    right: 10px;
+}
+
+.third .ready{
+    position: absolute;
+    top: 1450px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    width: 95%;
+    left: 5%;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.third .high{
+    position: absolute;
+    top: 1500px;
+    left: 5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    opacity: .5;
+}
+
+@media(max-width:450px){
+    .third .ready{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .third .high{
+        font-size: 13px;
+        line-height: 20px;
+        top: 1490px;
+    }
+    .third .tap{
+        font-size: 13px;
+    }
+    .third .lever{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .third .our{
+        font-size: 13px;
+        top: 130px;
+    }
+
+    .third .from{
+        font-size: 14px;
+        line-height: 20px;
+        top: 10px;
+    }
+    .second{
+        height: 220vh;
+    }
+    .second .unor li div svg{
+        position: absolute;
+        margin: 25px;
+    }
+    
+    .second .unor li{
+        height: 270px;
+    }
+    .second .unor li div{
+        width: 70px;
+        height: 70px;
+        margin-top: 30px;
+        margin-left: 20%;
+    }
+    .second .unor li h3{
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-top: 30px;
+    }
+    .second .unor li h6{
+        margin-top: 20px;
+        line-height: 20px;
+        font-size: 13px;
+        
+    }
+    .second .avoid{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .second .ship{
+        font-size: 15px;
+        line-height: 40px;
+        top: 130px;
+    }
+    .second .list{
+        width: 70%;
+        font-size: 13px;
+        top: 50px;
+    }
+    .second .featured{
+        margin-top: -50px;
+        font-size: 13px;
+    }
+    .landing .company ul::-webkit-scrollbar{
+        display: none;
+    }
+    .landing .company ul{
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+    .landing .company li{
+        
+        margin: 20px;
+    }
+    .landing .company{
+        position: absolute;
+        bottom: 120px;
+       width: 100%;
+       
+        
+    }
+    .landing .net li p{
+        font-size: 13px;
+    }
+    
+    .landing .net{
+        left: 45%;
+        top: 300px;
+        height: 35px;
+    }
+    .landing .hire{
+        font-size: 12px;
+        left: 5%;
+        font-family: 'Courier New', Courier, monospace;
+        word-spacing: -2px;
+        line-height: 20px;
+        top: 220px;
+    }
+    .landing .trusted{
+        font-size: 12px;
+        left: 5%;
+        font-family: 'Courier New', Courier, monospace;
+        word-spacing: -2px;
+        top: 430px;
+    }
+    .landing .build{
+        font-size: 18px;
+        line-height: 25px;
+        left: 5%;
+        top: 120px;
+    }
+    .sticky h2{
+    
+        left: 11%;
+    }
+}
